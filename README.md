@@ -1,5 +1,8 @@
 # InventoryManagementSystem
 
+![Alt text](preview-1.png?raw=true "preview-1")
+![Alt text](preview-2.png?raw=true "preview-2")
+![Alt text](preview-3.png?raw=true "preview-3")
 
 This is Inventory Management System project for my assignment.
 
