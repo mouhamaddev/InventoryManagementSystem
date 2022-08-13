@@ -1,0 +1,71 @@
+{% extends '../layout.html' %}
+{% block content %}
+  
+  <div class="content-section">     
+    <div class="row mx-auto justify-content-center">
+
+      <div class="card m-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Product Name</h5>
+          <div style="font-size: 30px;" class="text-center">
+            <span><i class="fab fa-product-hunt"></i></span>
+          </div>
+          <h3 class="text-center">{{ inventory.name }}</h6>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Description</h5>
+          <div style="font-size: 30px;" class="text-center">
+            <span><i class="fas fa-file-alt"></i></span>
+          </div>
+          <h3 class="text-center">{{ inventory.description }}</h6>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Note</h5>
+          <div style="font-size: 30px;" class="text-center">
+            <span><i class="fas fa-file-alt"></i></span>
+          </div>
+          <h3 class="text-center">{{ inventory.note }}</h6>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Stock {{ inventory.Stock }}</h5>
+          <div style="font-size: 30px;" class="text-center">
+            <span><i class="fas fa-dollar-sign"></i></span>
+          </div>
+          <h3 class="text-center">{{ inventory.stock }}</h6>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Availability</h5>
+          <div style="font-size: 30px;" class="text-center">
+            <span><i class="fas fa-dolly"></i></span>
+          </div>
+          <h3 class="text-center">{{ inventory.availability }}</h6>
+        </div>
+      </div>
+
+      <div class="card m-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">Supplier</h5>
+          <div style="font-size: 30px;" class="text-center">
+            <span><i class="fas fa-warehouse"></i></span>
+          </div>
+          <h3 class="text-center">{{ inventory.supplier }}</h6>
+        </div>
+      </div>
+
+      <a href="{% url 'product_update' inventory.id %}" class="btn btn-outline-success btn-sm mb-2">Update</a>
+      <a href="{% url 'product_delete' inventory.id %}" class="btn btn-danger btn-sm mb-2">Delete</a>
+  </div>
+</div>
+{% endblock %}
